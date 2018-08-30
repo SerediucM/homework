@@ -5,6 +5,22 @@
     float: left;
     width: 50%;
 }
+.err-companyName { 
+    position: absolute;
+    left: 103%;
+    top: 13%;
+    width: 40%;
+    height: 5%;
+    background: transparent
+}
+.err-companyDescription { 
+    position: absolute;
+    left: 103%;
+    top: 50%;
+    width: 40%;
+    height: 5%;
+    background: transparent
+}
 .profile{
     position: absolute;
     top: 20%;

@@ -4,9 +4,9 @@
     <div class="add_service">
       <div class="section1">
           <div class="top">
-              <form class="" action="Dashboard_v1">
+              <form  action="Dashboard_v1">
                 <br><h3 class="title">Add new service</h3>
-                <input type="submit" value="+" class="add"><br>
+                <input type="submit" value="+" class="add" [(disabled)]="!validformAccount.valid"><br>
                 <h5 class="service">Add service</h5><br>
                 <h5 class="details">SERVICE DETAILS</h5>
               </form>
@@ -14,20 +14,35 @@
           <div class="left">
               <form action="">
                 <h5 class="text">Service name</h5><br>
-                <input type="text" class="tbox"><br>
+                <input type="text" class="tbox" required [(ngModel)]=logiInputPasswor name="serviceName" #serviceName= "ngModel" ><br>
+                <div class="err-serviceName  alert-danger" *ngIf="serviceName.touched && !serviceName.valid" >
+                    <div *ngIf="serviceName.errors.required">Password is required</div>
+                </div>
                 <h5 class="text">Service description</h5><br>
-                <textarea class="tbox_mare" ></textarea>
+                <textarea class="tbox_mare" required [(ngModel)]=loginInputPaswor name="serviceDescription" #serviceDescription= "ngModel" ></textarea>
+                <div class="err-serviceName  alert-danger" *ngIf="serviceDescription.touched && !serviceDescription.valid" >
+                    <div *ngIf="serviceDescription.errors.required">Password is required</div>
+                </div>
               </form>
           </div>
           <div class="right">
-            <form action="">
+            <form name="validformAccount"  #validformAccount="ngForm">
               <h5 class="text">Service duration</h5><br>
-              <input type="text"  class="tbox"><br>
+              <input type="text" class="tbox" required [(ngModel)]=loginInputPasswor name="serviceDuration" #serviceDuration= "ngModel"><br>
+              <div class="err-serviceName  alert-danger" *ngIf="serviceDuration.touched && !serviceDuration.valid" >
+                  <div *ngIf="serviceDuration.errors.required">Password is required</div>
+              </div>
               <h5 class="text">Spaces</h5><br>
-              <input type="text" name="spaces" value="" class="tbox"><br>
+              <input type="text" name="spaces" required [(ngModel)]=loginInputPassor name="serviceSpaces" #serviceSpaces= "ngModel" class="tbox"><br>
+              <div class="err-serviceName  alert-danger" *ngIf="serviceSpaces.touched && !serviceSpaces.valid" >
+                  <div *ngIf="serviceSpaces.errors.required">Password is required</div>
+              </div>
               <h5 class="text">Price</h5><br>
-              <input type="value" name="price" value="" class="tbox"><br>
-              </form>
+              <input type="value" name="price" required [(ngModel)]=loginInputPpasswor name="servicePrice" #servicePrice= "ngModel" class="tbox"><br>
+              <div class="err-serviceName  alert-danger" *ngIf="servicePrice.touched && !servicePrice.valid" >
+                  <div *ngIf="servicePrice.errors.required">Password is required</div>
+              </div>
+            </form>
           </div>
       </div>
       <div class="section1">
@@ -62,13 +77,14 @@
           <tbody>
             <tr>
               <td class="hour" rowspan="1"><span>7:00</span></td>
+              <td><input type="checkbox" value="ora7Luni" class="check" [(ngModel)]=Luni7 ></td>
+              <td><input type="checkbox" class="check" [(ngModel)]=Luni8></td>
+              <td><input type="checkbox" class="check" [(ngModel)]=Luni9></td>
+              <td><input type="checkbox" class="check" [(ngModel)]=Luni10></td>
               <td><input type="checkbox" class="check"></td>
               <td><input type="checkbox" class="check"></td>
               <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
+              <button (click)="test()"></button>
             </tr>
             <tr>
               <td class="hour" rowspan="1"><span>8:00</span></td>

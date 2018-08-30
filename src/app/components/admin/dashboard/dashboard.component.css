@@ -30,6 +30,7 @@
     height: 55px;
     width: 190px;
     border-radius: 3px;
+    cursor: pointer;
 }
 .new_s h1{
   color: white;
@@ -65,6 +66,7 @@
     margin-top: 6px;
     margin-right: 10px;
     color: #858585;
+    cursor: pointer;
 }
 .sd1{
     float: left;
