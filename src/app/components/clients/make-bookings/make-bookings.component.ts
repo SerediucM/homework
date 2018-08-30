@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from '../../../modal';
+import { ModalComponent } from '../../../directives';
+
 @Component({
   selector: 'app-make-bookings',
   templateUrl: './make-bookings.component.html',

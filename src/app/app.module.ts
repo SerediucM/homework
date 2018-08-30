@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule } from '@angular/router';
 
 
@@ -17,6 +17,7 @@ import { CalendarComponent } from './components/admin/calendar/calendar.componen
 import { MyAccountComponent } from './components/admin/my-account/my-account.component';
 import { MakeBookingsComponent } from './components/clients/make-bookings/make-bookings.component';
 import { AddServiceComponent } from './components/admin/add-service/add-service.component';
+import { ModalComponent} from '../app/directives';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
@@ -38,9 +39,11 @@ const routes: Routes = [
     MyAccountComponent,
     MakeBookingsComponent,
     MakeBookingsComponent,
-    AddServiceComponent
+    AddServiceComponent,
+    ModalComponent
     ],
   imports: [
+    NgbModule,
     RouterModule.forRoot(routes, { useHash: true }),
     BrowserModule,
     FormsModule,

@@ -24,10 +24,20 @@
     display:inline-block ;
 }
 .details{
+    position: absolute;
     color:darkgray;
     font-family: Arial;
     font-size: 14px;
     display:inline-block ;
+    top: 14%;
+}
+.details_availability{
+    position: absolute;
+    color:darkgray;
+    font-family: Arial;
+    font-size: 14px;
+    display:inline-block ;
+    top: 48%;
 }
 .text{
     margin-top: 30px;
